@@ -70,3 +70,7 @@ bower.json
 
 # Ignore node_modules
 node_modules/
+
+## https://github.com/gmacdougall/solidus-docker-demo/blob/master/.gitignore
+# Local Assets
+/public/spree
