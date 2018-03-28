@@ -52,6 +52,20 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+
+  # model and controller UML class diagram generator
+  gem "railroady"
+
+  # Generate Entity-Relationship Diagrams for Rails applications
+  gem 'rails-erd'
+
+  # Entity Relationship Diagram Viewer for schema.rb
+  # https://github.com/xketanaka/schemard
+  # bundle exec schemard gen-relation > db/relation.metadata
+  # bundle exec schemard -f db/relation.metadata
+  # access ->
+  #   http://localhost:10080
+  gem 'schemard'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

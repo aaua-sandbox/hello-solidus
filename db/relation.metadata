@@ -1,0 +1,456 @@
+---
+tables:
+  spree_payments:
+    has_many:
+    - spree_payments
+    - spree_log_entries
+    - spree_state_changes
+    - spree_payment_capture_events
+    - spree_refunds
+    belongs_to:
+    - spree_orders
+    - spree_payment_methods
+  spree_inventory_units:
+    has_one:
+    - spree_return_items
+    - spree_unit_cancels
+    has_many:
+    - spree_return_items
+    belongs_to:
+    - spree_variants
+    - spree_shipments
+    - spree_return_authorizations
+    - spree_cartons
+    - spree_line_items
+  spree_payment_methods:
+    has_many:
+    - spree_payments
+    - spree_credit_cards
+    - spree_store_payment_methods
+  spree_stock_items:
+    has_many:
+    - spree_stock_movements
+    belongs_to:
+    - spree_stock_locations
+    - spree_variants
+  spree_taxons:
+    has_many:
+    - spree_taxons
+    - spree_products_taxons
+    - spree_promotion_rule_taxons
+    belongs_to:
+    - spree_taxons
+    - spree_taxonomies
+  spree_variant_property_rule_conditions:
+    belongs_to:
+    - spree_option_values
+    - spree_variant_property_rules
+  spree_tax_rates:
+    has_one:
+    - spree_calculators
+    has_many:
+    - spree_tax_rate_tax_categories
+    - spree_adjustments
+    - spree_shipping_rate_taxes
+    belongs_to:
+    - spree_zones
+  spree_shipping_methods:
+    has_one:
+    - spree_calculators
+    has_many:
+    - spree_shipping_method_categories
+    - spree_shipping_rates
+    - spree_cartons
+    - spree_shipping_method_zones
+    - spree_shipping_method_stock_locations
+    belongs_to:
+    - spree_tax_categories
+  spree_tax_categories:
+    has_many:
+    - spree_tax_rate_tax_categories
+  spree_shipping_categories:
+    has_many:
+    - spree_products
+    - spree_shipping_method_categories
+  spree_zone_members:
+    belongs_to:
+    - spree_zones
+  spree_reimbursement_types:
+    has_many:
+    - spree_return_items
+  spree_orders:
+    has_many:
+    - spree_line_items
+    - spree_shipments
+    - spree_adjustments
+    - spree_adjustments
+    - spree_orders_promotions
+    - spree_payments
+    - spree_return_authorizations
+    - spree_reimbursements
+    - spree_state_changes
+    belongs_to:
+    - spree_users
+    - spree_addresses
+    - spree_addresses
+    - spree_stores
+    - spree_users
+    - spree_users
+    - spree_users
+  spree_user_stock_locations:
+    belongs_to:
+    - spree_users
+    - spree_stock_locations
+  spree_products_taxons:
+    belongs_to:
+    - spree_products
+    - spree_taxons
+  spree_calculators:
+    belongs_to: []
+  spree_stores:
+    has_many:
+    - spree_store_payment_methods
+    - spree_orders
+  spree_shipping_method_stock_locations:
+    belongs_to:
+    - spree_shipping_methods
+    - spree_stock_locations
+  spree_return_reasons:
+    has_many:
+    - spree_return_authorizations
+  spree_store_credit_events:
+    belongs_to:
+    - spree_store_credits
+    - spree_store_credit_update_reasons
+  spree_return_authorizations:
+    has_many:
+    - spree_return_items
+    belongs_to:
+    - spree_orders
+    - spree_stock_locations
+    - spree_return_reasons
+  spree_assets:
+    belongs_to: []
+  spree_properties:
+    has_many:
+    - spree_product_properties
+  spree_promotion_rules:
+    belongs_to:
+    - spree_promotions
+  spree_credit_cards:
+    has_many:
+    - spree_payments
+    - spree_wallet_payment_sources
+    belongs_to:
+    - spree_payment_methods
+    - spree_users
+    - spree_addresses
+  spree_payment_capture_events:
+    belongs_to:
+    - spree_payments
+  spree_order_mutexes:
+    belongs_to:
+    - spree_orders
+  spree_orders_promotions:
+    belongs_to:
+    - spree_orders
+    - spree_promotions
+    - spree_promotion_codes
+  spree_roles:
+    has_many:
+    - spree_roles_users
+  spree_refunds:
+    has_many:
+    - spree_log_entries
+    belongs_to:
+    - spree_payments
+    - spree_refund_reasons
+    - spree_reimbursements
+  spree_user_addresses:
+    belongs_to:
+    - spree_users
+    - spree_addresses
+  spree_roles_users:
+    belongs_to:
+    - spree_roles
+    - spree_users
+  spree_state_changes:
+    belongs_to:
+    - spree_users
+  spree_store_credit_types:
+    has_many:
+    - spree_store_credits
+  spree_adjustment_reasons:
+    has_many:
+    - spree_adjustments
+  spree_taxonomies:
+    has_one:
+    - spree_taxons
+    has_many:
+    - spree_taxons
+  spree_adjustments:
+    belongs_to:
+    - spree_orders
+    - spree_promotion_codes
+    - spree_adjustment_reasons
+  spree_stock_movements:
+    belongs_to:
+    - spree_stock_items
+  spree_stock_locations:
+    has_many:
+    - spree_shipments
+    - spree_stock_items
+    - spree_cartons
+    - spree_user_stock_locations
+    - spree_shipping_method_stock_locations
+    belongs_to:
+    - spree_states
+    - spree_countries
+  spree_users:
+    has_one:
+    - spree_user_addresses
+    has_many:
+    - spree_user_addresses
+    - spree_roles_users
+    - spree_user_stock_locations
+    - spree_orders
+    - spree_orders
+    - spree_store_credits
+    - spree_credit_cards
+    - spree_wallet_payment_sources
+    belongs_to:
+    - spree_addresses
+  spree_variant_property_rule_values:
+    belongs_to:
+    - spree_properties
+    - spree_variant_property_rules
+  spree_store_payment_methods:
+    belongs_to:
+    - spree_stores
+    - spree_payment_methods
+  spree_store_credits:
+    has_many:
+    - spree_payments
+    - spree_wallet_payment_sources
+    - spree_store_credit_events
+    belongs_to:
+    - spree_payment_methods
+    - spree_users
+    - spree_users
+    - spree_store_credit_categories
+    - spree_store_credit_types
+  spree_reimbursement_credits:
+    belongs_to:
+    - spree_reimbursements
+  spree_refund_reasons:
+    has_many:
+    - spree_refunds
+  spree_promotion_rules_users:
+    belongs_to:
+    - spree_promotion_rules
+    - spree_users
+  spree_log_entries:
+    belongs_to: []
+  spree_unit_cancels:
+    has_one:
+    - spree_adjustments
+    belongs_to:
+    - spree_inventory_units
+  spree_variant_property_rules:
+    has_many:
+    - spree_variant_property_rule_values
+    - spree_variant_property_rule_conditions
+    belongs_to:
+    - spree_products
+  spree_tax_rate_tax_categories:
+    belongs_to:
+    - spree_tax_rates
+    - spree_tax_categories
+  spree_states:
+    has_many:
+    - spree_addresses
+    belongs_to:
+    - spree_countries
+  spree_shipping_rate_taxes:
+    belongs_to:
+    - spree_shipping_rates
+    - spree_tax_rates
+  spree_wallet_payment_sources:
+    belongs_to:
+    - spree_users
+  spree_shipping_rates:
+    has_many:
+    - spree_shipping_rate_taxes
+    belongs_to:
+    - spree_shipments
+    - spree_shipping_methods
+  spree_shipping_method_zones:
+    belongs_to:
+    - spree_zones
+    - spree_shipping_methods
+  spree_shipping_method_categories:
+    belongs_to:
+    - spree_shipping_methods
+    - spree_shipping_categories
+  spree_zones:
+    has_many:
+    - spree_zone_members
+    - spree_tax_rates
+    - spree_shipping_method_zones
+  spree_shipments:
+    has_many:
+    - spree_adjustments
+    - spree_inventory_units
+    - spree_shipping_rates
+    - spree_state_changes
+    belongs_to:
+    - spree_orders
+    - spree_stock_locations
+  spree_return_items:
+    belongs_to:
+    - spree_return_authorizations
+    - spree_inventory_units
+    - spree_variants
+    - spree_inventory_units
+    - spree_customer_returns
+    - spree_reimbursements
+    - spree_reimbursement_types
+    - spree_reimbursement_types
+    - spree_return_reasons
+  spree_addresses:
+    belongs_to:
+    - spree_countries
+    - spree_states
+  spree_reimbursements:
+    has_many:
+    - spree_refunds
+    - spree_reimbursement_credits
+    - spree_return_items
+    belongs_to:
+    - spree_orders
+    - spree_customer_returns
+  spree_promotion_rule_roles:
+    belongs_to:
+    - spree_promotion_rules
+    - spree_roles
+  spree_cartons:
+    has_many:
+    - spree_inventory_units
+    belongs_to:
+    - spree_addresses
+    - spree_stock_locations
+    - spree_shipping_methods
+  spree_variants:
+    has_one:
+    - spree_prices
+    has_many:
+    - spree_inventory_units
+    - spree_line_items
+    - spree_stock_items
+    - spree_option_values_variants
+    - spree_assets
+    - spree_prices
+    - spree_prices
+    belongs_to:
+    - spree_products
+    - spree_tax_categories
+  spree_promotion_rule_taxons:
+    belongs_to:
+    - spree_promotion_rules
+    - spree_taxons
+  spree_promotion_code_batches:
+    has_many:
+    - spree_promotion_codes
+    belongs_to:
+    - spree_promotions
+  spree_promotion_actions:
+    belongs_to:
+    - spree_promotions
+  spree_option_values:
+    has_many:
+    - spree_option_values_variants
+    belongs_to:
+    - spree_option_types
+  spree_product_properties:
+    belongs_to:
+    - spree_products
+    - spree_properties
+  spree_promotions:
+    has_many:
+    - spree_promotion_rules
+    - spree_promotion_actions
+    - spree_orders_promotions
+    - spree_promotion_codes
+    - spree_promotion_code_batches
+    belongs_to:
+    - spree_promotion_categories
+  spree_products:
+    has_one:
+    - spree_variants
+    has_many:
+    - friendly_id_slugs
+    - spree_product_option_types
+    - spree_product_properties
+    - spree_variant_property_rules
+    - spree_products_taxons
+    - spree_product_promotion_rules
+    - spree_variants
+    - spree_variants
+    belongs_to:
+    - spree_tax_categories
+    - spree_shipping_categories
+  spree_line_items:
+    has_many:
+    - spree_adjustments
+    - spree_inventory_units
+    - spree_line_item_actions
+    belongs_to:
+    - spree_orders
+    - spree_variants
+    - spree_tax_categories
+  spree_option_types:
+    has_many:
+    - spree_option_values
+    - spree_product_option_types
+  spree_product_promotion_rules:
+    belongs_to:
+    - spree_products
+    - spree_promotion_rules
+  spree_product_option_types:
+    belongs_to:
+    - spree_products
+    - spree_option_types
+  spree_prices:
+    belongs_to:
+    - spree_variants
+    - spree_countries
+  friendly_id_slugs:
+    belongs_to: []
+  spree_promotion_codes:
+    has_many:
+    - spree_adjustments
+    belongs_to:
+    - spree_promotions
+    - spree_promotion_code_batches
+  spree_countries:
+    has_many:
+    - spree_states
+    - spree_addresses
+    - spree_prices
+  spree_promotion_categories:
+    has_many:
+    - spree_promotions
+  spree_customer_returns:
+    has_many:
+    - spree_return_items
+    - spree_reimbursements
+    belongs_to:
+    - spree_stock_locations
+  spree_line_item_actions:
+    belongs_to:
+    - spree_line_items
+    - spree_promotion_actions
+  spree_option_values_variants:
+    belongs_to:
+    - spree_variants
+    - spree_option_values

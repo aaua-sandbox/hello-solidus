@@ -1,0 +1,272 @@
+---
+tables:
+  friendly_id_slugs:
+    position_top: 0
+    position_left: 0
+  spree_addresses:
+    position_top: '63.9375'
+    position_left: '665.859375'
+  spree_adjustment_reasons:
+    position_top: '313.359375'
+    position_left: '3624.75'
+  spree_adjustments:
+    position_top: '90.890625'
+    position_left: '3132.609375'
+  spree_assets:
+    position_top: '4022.953125'
+    position_left: '2382.28125'
+  spree_calculators:
+    position_top: '90'
+    position_left: '1256.578125'
+  spree_cartons:
+    position_top: '343.96875'
+    position_left: '2145.890625'
+  spree_countries:
+    position_top: '85.96875'
+    position_left: '2677.265625'
+  spree_credit_cards:
+    position_top: '438.890625'
+    position_left: '2450.71875'
+  spree_customer_returns:
+    position_top: '497.296875'
+    position_left: '1606.59375'
+  spree_inventory_units:
+    position_top: 0
+    position_left: 0
+  spree_line_item_actions:
+    position_top: 0
+    position_left: 0
+  spree_line_items:
+    position_top: '942.890625'
+    position_left: '2866.734375'
+  spree_log_entries:
+    position_top: '1471.5'
+    position_left: '1858.640625'
+  spree_option_type_prototypes:
+    position_top: 0
+    position_left: 0
+  spree_option_types:
+    position_top: 0
+    position_left: 0
+  spree_option_values:
+    position_top: '1428'
+    position_left: '1380.75'
+  spree_option_values_variants:
+    position_top: 0
+    position_left: 0
+  spree_order_mutexes:
+    position_top: 0
+    position_left: 0
+  spree_orders:
+    position_top: 0
+    position_left: 0
+  spree_orders_promotions:
+    position_top: 0
+    position_left: 0
+  spree_payment_capture_events:
+    position_top: 0
+    position_left: 0
+  spree_payment_methods:
+    position_top: 0
+    position_left: 0
+  spree_payments:
+    position_top: 0
+    position_left: 0
+  spree_preferences:
+    position_top: 0
+    position_left: 0
+  spree_prices:
+    position_top: 0
+    position_left: 0
+  spree_product_option_types:
+    position_top: 0
+    position_left: 0
+  spree_product_promotion_rules:
+    position_top: 0
+    position_left: 0
+  spree_product_properties:
+    position_top: 0
+    position_left: 0
+  spree_products:
+    position_top: 0
+    position_left: 0
+  spree_products_taxons:
+    position_top: 0
+    position_left: 0
+  spree_promotion_action_line_items:
+    position_top: 0
+    position_left: 0
+  spree_promotion_actions:
+    position_top: 0
+    position_left: 0
+  spree_promotion_categories:
+    position_top: 0
+    position_left: 0
+  spree_promotion_code_batches:
+    position_top: 0
+    position_left: 0
+  spree_promotion_codes:
+    position_top: 0
+    position_left: 0
+  spree_promotion_rule_taxons:
+    position_top: 0
+    position_left: 0
+  spree_promotion_rules:
+    position_top: 0
+    position_left: 0
+  spree_promotion_rules_users:
+    position_top: 0
+    position_left: 0
+  spree_promotions:
+    position_top: 0
+    position_left: 0
+  spree_properties:
+    position_top: 0
+    position_left: 0
+  spree_property_prototypes:
+    position_top: 0
+    position_left: 0
+  spree_prototype_taxons:
+    position_top: 0
+    position_left: 0
+  spree_prototypes:
+    position_top: 0
+    position_left: 0
+  spree_refund_reasons:
+    position_top: 0
+    position_left: 0
+  spree_refunds:
+    position_top: 0
+    position_left: 0
+  spree_reimbursement_credits:
+    position_top: 0
+    position_left: 0
+  spree_reimbursement_types:
+    position_top: 0
+    position_left: 0
+  spree_reimbursements:
+    position_top: 0
+    position_left: 0
+  spree_return_authorizations:
+    position_top: 0
+    position_left: 0
+  spree_return_items:
+    position_top: 0
+    position_left: 0
+  spree_return_reasons:
+    position_top: 0
+    position_left: 0
+  spree_roles:
+    position_top: 0
+    position_left: 0
+  spree_roles_users:
+    position_top: 0
+    position_left: 0
+  spree_shipments:
+    position_top: 0
+    position_left: 0
+  spree_shipping_categories:
+    position_top: 0
+    position_left: 0
+  spree_shipping_method_categories:
+    position_top: 0
+    position_left: 0
+  spree_shipping_method_stock_locations:
+    position_top: 0
+    position_left: 0
+  spree_shipping_method_zones:
+    position_top: 0
+    position_left: 0
+  spree_shipping_methods:
+    position_top: 0
+    position_left: 0
+  spree_shipping_rate_taxes:
+    position_top: 0
+    position_left: 0
+  spree_shipping_rates:
+    position_top: 0
+    position_left: 0
+  spree_state_changes:
+    position_top: 0
+    position_left: 0
+  spree_states:
+    position_top: 0
+    position_left: 0
+  spree_stock_items:
+    position_top: 0
+    position_left: 0
+  spree_stock_locations:
+    position_top: '3839.953125'
+    position_left: '142.3125'
+  spree_stock_movements:
+    position_top: 0
+    position_left: 0
+  spree_store_credit_categories:
+    position_top: 0
+    position_left: 0
+  spree_store_credit_events:
+    position_top: 0
+    position_left: 0
+  spree_store_credit_types:
+    position_top: 0
+    position_left: 0
+  spree_store_credit_update_reasons:
+    position_top: 0
+    position_left: 0
+  spree_store_credits:
+    position_top: 0
+    position_left: 0
+  spree_store_payment_methods:
+    position_top: '4451.953125'
+    position_left: '206.296875'
+  spree_stores:
+    position_top: 0
+    position_left: 0
+  spree_tax_categories:
+    position_top: 0
+    position_left: 0
+  spree_tax_rate_tax_categories:
+    position_top: 0
+    position_left: 0
+  spree_tax_rates:
+    position_top: 0
+    position_left: 0
+  spree_taxonomies:
+    position_top: '3644.953125'
+    position_left: '3108.9375'
+  spree_taxons:
+    position_top: '3680.953125'
+    position_left: '2034.234375'
+  spree_unit_cancels:
+    position_top: 0
+    position_left: 0
+  spree_user_addresses:
+    position_top: 0
+    position_left: 0
+  spree_user_stock_locations:
+    position_top: 0
+    position_left: 0
+  spree_users:
+    position_top: 0
+    position_left: 0
+  spree_variant_property_rule_conditions:
+    position_top: 0
+    position_left: 0
+  spree_variant_property_rule_values:
+    position_top: 0
+    position_left: 0
+  spree_variant_property_rules:
+    position_top: 0
+    position_left: 0
+  spree_variants:
+    position_top: 0
+    position_left: 0
+  spree_wallet_payment_sources:
+    position_top: 0
+    position_left: 0
+  spree_zone_members:
+    position_top: 0
+    position_left: 0
+  spree_zones:
+    position_top: 0
+    position_left: 0
